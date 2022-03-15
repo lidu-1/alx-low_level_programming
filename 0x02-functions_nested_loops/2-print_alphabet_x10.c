@@ -1,18 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "holberton.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet_x10 -repeats the print_alphabet 10times.
+ *return: Nothing.
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	char low;
-
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-		printf("\n");
-
-	return (0);
+	int 1;
+	char c;
+	for(1=0;1<10;++1)
+	{
+		for(c='a';c<='z';c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
 }
