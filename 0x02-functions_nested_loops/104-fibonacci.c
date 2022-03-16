@@ -1,101 +1,41 @@
-#include <stdio.h>
-
-
-
+#include<stdio.h>
 
 /**
-
- * main - Prints the first 98 Fibonacci numbers
-
+ * main - first 50 fibonatchi.
  *
-
- * Return: Always 0.
-
+ * Return: void.
  */
-
 int main(void)
-
 {
+	unsigned long int i, i0, i1, j, j0, j1, e, e0, e1, y, k;
 
-int c, boolean, boolean2;
+	i = 1;
+	j = 2;
+	e = i + j;
 
-long int n1, n2, fn, fn2, n11, n22;
-
-
-
-
-n1 = 1;
-
-n2 = 2;
-
-boolean =  boolean2 = 1;
-
-printf("%ld, %ld", n1, n2);
-
-for (c = 0; c < 96; c++)
-
-{
-
-if (boolean)
-
-{
-
-fn = n1 + n2;
-
-printf(", %ld", fn);
-
-n1 = n2;
-
-n2 = fn;
-
-}
-
-else
-
-{
-
-if (boolean2)
-
-{
-
-n11 = n1 % 1000000000;
-
-n22 = n2 % 1000000000;
-
-n1 = n1 / 1000000000;
-
-n2 = n2 / 1000000000;
-
-boolean2 = 0;
-
-}
-
-fn2 = (n11 + n22);
-
-fn = n1 + n2 + (fn2 / 1000000000);
-
-printf(", %ld", fn);
-
-printf("%ld", fn2 % 1000000000);
-
-n1 = n2;
-
-n11 = n22;
-
-n2 = fn;
-
-n22 = (fn2 % 1000000000);
-
-}
-
-if (((n1 + n2) < 0) && boolean == 1)
-
-boolean = 0;
-
-}
-
-printf("\n");
-
-return (0);
-
+	printf("%lu, ", i);
+	printf("%lu, ", j);
+	for (y = 3; y < 89; y++)
+	{
+		printf("%lu, ", e);
+		i = j;
+		j = e;
+		e = i + j;
+	}
+	j0 = j / 1000000000;
+	j1 = j % 1000000000;
+	e0 = e / 1000000000;
+	e1 = e % 1000000000;
+	for (k = 89; k < 98; k++)
+	{
+		printf("%lu%lu, ", e0, e1);
+		i0 = j0;
+		i1 = j1;
+		j0 = e0;
+		j1 = e1;
+		e0 = i0 + j0 + ((i1 + j1) / 1000000000);
+		e1 = (i1 + j1) % 1000000000;
+	}
+printf("%lu%lu\n", e0, e1);
+	return (0);
 }
