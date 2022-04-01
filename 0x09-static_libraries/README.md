@@ -1,0 +1,1 @@
+readdme instatic library
