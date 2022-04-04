@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <main.h>
 
 /**
  * strtow - char
@@ -81,4 +82,4 @@ char **strtow(char *str)
 	}
 	*(f + j) = NULL;
 	return (f);
-} /*yes*/
+}
